@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragment_splash">
+
+    <fragment
+        android:id="@+id/fragment_splash"
+        android:name="com.example.madartestapp.UI.SplashFragment"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splash_fragment_to_fragment_add_user"
+            app:destination="@id/fragment_add_user"
+            app:popUpTo="@+id/fragment_splash"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_add_user"
+        android:name="com.example.madartestapp.UI.AddUserFragment"
+        tools:layout="@layout/fragment_add_user">
+    <action
+        android:id="@+id/action_fragment_add_user_to_fragment_show_users"
+        app:destination="@id/fragment_show_users" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_show_users"
+        android:name="com.example.madartestapp.UI.ShowUsersFragment"
+        tools:layout="@layout/fragment_show_users">
+    </fragment>
+
+
+</navigation>

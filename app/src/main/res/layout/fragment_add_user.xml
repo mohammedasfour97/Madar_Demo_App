@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/_10sdp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_user_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="30sp"
+            android:text="@string/add_new_user"
+            android:textColor="@color/design_default_color_primary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/add_user_name_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/white_solid_prim_stroke"
+            android:textSize="20sp"
+            android:padding="@dimen/_10sdp"
+            android:hint="@string/name"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/add_user_age_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:inputType="number"
+            android:background="@drawable/white_solid_prim_stroke"
+            android:textSize="20sp"
+            android:padding="@dimen/_10sdp"
+            android:hint="@string/age"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/add_user_job_title_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/white_solid_prim_stroke"
+            android:textSize="20sp"
+            android:padding="@dimen/_10sdp"
+            android:hint="@string/job_title"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/add_user_male_linLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/prim_solid"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/add_user_male_img"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_male_white"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/add_user_male_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:text="@string/male"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/add_user_female_linLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:background="@drawable/white_solid_prim_stroke_30"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/add_user_female_img"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_female_prim"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/add_user_female_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textSize="15sp"
+                    android:text="@string/female"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_user_add_user_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/insert"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:backgroundTint="?attr/colorPrimary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:cornerRadius="20dp"
+            app:rippleColor="@android:color/white"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_user_show_users_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/show_all_users"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="20sp"
+            app:backgroundTint="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/design_default_color_primary"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
