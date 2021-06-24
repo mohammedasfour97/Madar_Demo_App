@@ -10,7 +10,7 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeSuccessDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 import com.example.madartestapp.R;
 import com.example.madartestapp.User;
-import com.example.madartestapp.RoomDB.UserViewModel;
+import com.example.madartestapp.ViewModels.UserViewModel;
 import com.example.madartestapp.databinding.FragmentAddUserBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textview.MaterialTextView;
@@ -49,7 +49,7 @@ public class AddUserFragment extends Fragment {
 
         userViewModel = ViewModelProviders.of(getActivity()).get(UserViewModel.class);
 
-        navController = navController = Navigation.findNavController(getActivity(), R.id.my_nav_host_fragment);
+        navController  = Navigation.findNavController(getActivity(), R.id.my_nav_host_fragment);
 
         selected_gender = "Male";
         //set selected gender layout color
@@ -98,25 +98,36 @@ public class AddUserFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                new AwesomeSuccessDialog(getContext())
-                        .setTitle(R.string.add_new_user)
-                        .setMessage(R.string.sure_add_user)
-                        .setColoredCircle(R.color.dialogSuccessBackgroundColor)
-                        .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
-                        .setCancelable(false)
-                        .setPositiveButtonText(getString(R.string.yes))
-                        .setPositiveButtonbackgroundColor(R.color.dialogSuccessBackgroundColor)
-                        .setPositiveButtonTextColor(R.color.white)
-                        .setNegativeButtonText(getString(R.string.no))
-                        .setNegativeButtonbackgroundColor(R.color.dialogSuccessBackgroundColor)
-                        .setNegativeButtonTextColor(R.color.white)
-                        .setPositiveButtonClick(new Closure() {
-                            @Override
-                            public void exec() {
-                                addNewUser();
-                            }
-                        })
-                        .show();
+                if (getTextFromEditTexts()){
+
+                    AwesomeSuccessDialog awesomeSuccessDialog = new AwesomeSuccessDialog(getContext());
+
+                            awesomeSuccessDialog.setTitle(R.string.add_new_user)
+                            .setMessage(R.string.sure_add_user)
+                            .setColoredCircle(R.color.dialogSuccessBackgroundColor)
+                            .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
+                            .setCancelable(false)
+                            .setPositiveButtonText(getString(R.string.yes))
+                            .setPositiveButtonbackgroundColor(R.color.dialogSuccessBackgroundColor)
+                            .setPositiveButtonTextColor(R.color.white)
+                            .setNegativeButtonText(getString(R.string.no))
+                            .setNegativeButtonbackgroundColor(R.color.dialogSuccessBackgroundColor)
+                            .setNegativeButtonTextColor(R.color.white)
+                            .setPositiveButtonClick(new Closure() {
+                                @Override
+                                public void exec() {
+                                    addNewUser();
+                                }
+                            })
+                                    .setNegativeButtonClick(new Closure() {
+                                        @Override
+                                        public void exec() {
+                                            awesomeSuccessDialog.hide();
+                                        }
+                                    })
+                            .show();
+                }
+
             }
         });
         // set add user button action
@@ -160,8 +171,6 @@ public class AddUserFragment extends Fragment {
 
     private void addNewUser(){
 
-        if (getTextFromEditTexts()){
-
             userViewModel.insertUser(inserted_user);
 
             Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
@@ -170,5 +179,5 @@ public class AddUserFragment extends Fragment {
 
             navController.navigate(R.id.action_fragment_add_user_to_fragment_show_users);
         }
-    }
+
 }

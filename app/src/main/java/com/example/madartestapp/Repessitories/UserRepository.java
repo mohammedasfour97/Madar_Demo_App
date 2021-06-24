@@ -1,16 +1,18 @@
-package com.example.madartestapp;
+package com.example.madartestapp.Repessitories;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
+import com.example.madartestapp.MyApplication;
 import com.example.madartestapp.RoomDB.UserDao;
+import com.example.madartestapp.RoomDB.UserDatabase;
+import com.example.madartestapp.User;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 public class UserRepository {
     private UserDao user_dao;

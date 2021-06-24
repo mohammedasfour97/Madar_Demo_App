@@ -1,6 +1,7 @@
-package com.example.madartestapp;
+package com.example.madartestapp.RoomDB;
 
 import com.example.madartestapp.RoomDB.UserDao;
+import com.example.madartestapp.User;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;

@@ -1,8 +1,8 @@
-package com.example.madartestapp.Modules;
+package com.example.madartestapp.DI.Modules;
 
 import android.content.Context;
 
-import com.example.madartestapp.UserDatabase;
+import com.example.madartestapp.RoomDB.UserDatabase;
 
 import javax.inject.Singleton;
 

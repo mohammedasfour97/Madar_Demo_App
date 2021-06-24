@@ -1,9 +1,11 @@
-package com.example.madartestapp;
+package com.example.madartestapp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.example.madartestapp.R;
+import com.example.madartestapp.User;
 import com.example.madartestapp.databinding.UserItemBinding;
 
 import java.util.List;

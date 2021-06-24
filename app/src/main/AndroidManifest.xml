@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadarTestApp"
         android:name=".MyApplication">
-        <activity android:name=".MainActivity">
+        <activity android:name=".UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

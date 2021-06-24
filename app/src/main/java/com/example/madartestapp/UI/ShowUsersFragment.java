@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 
 import com.example.madartestapp.R;
 import com.example.madartestapp.User;
-import com.example.madartestapp.RoomDB.UserViewModel;
-import com.example.madartestapp.UsersAdapter;
+import com.example.madartestapp.ViewModels.UserViewModel;
+import com.example.madartestapp.Adapters.UsersAdapter;
 import com.example.madartestapp.databinding.FragmentShowUsersBinding;
 
 import java.util.ArrayList;

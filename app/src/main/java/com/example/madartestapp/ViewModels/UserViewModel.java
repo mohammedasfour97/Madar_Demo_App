@@ -1,15 +1,14 @@
-package com.example.madartestapp.RoomDB;
+package com.example.madartestapp.ViewModels;
 
 import android.app.Application;
 
 import com.example.madartestapp.User;
-import com.example.madartestapp.UserRepository;
+import com.example.madartestapp.Repessitories.UserRepository;
 
 import java.util.List;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 public class UserViewModel extends AndroidViewModel {
 

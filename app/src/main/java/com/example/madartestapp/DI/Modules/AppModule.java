@@ -1,4 +1,4 @@
-package com.example.madartestapp.Modules;
+package com.example.madartestapp.DI.Modules;
 
 import android.app.Application;
 

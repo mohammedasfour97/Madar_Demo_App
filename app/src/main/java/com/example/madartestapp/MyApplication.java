@@ -2,8 +2,10 @@ package com.example.madartestapp;
 
 import android.app.Application;
 
-import com.example.madartestapp.Modules.AppModule;
-import com.example.madartestapp.Modules.UserDatabaseModule;
+import com.example.madartestapp.DI.DaggerUserComponent;
+import com.example.madartestapp.DI.Modules.AppModule;
+import com.example.madartestapp.DI.UserComponent;
+import com.example.madartestapp.DI.Modules.UserDatabaseModule;
 
 public class MyApplication extends Application {
 
