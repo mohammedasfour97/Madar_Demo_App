@@ -5,5 +5,6 @@ What is used in this app :
 - MVVM design archeticture
 - DataBinding
 - Dependency injection using Dagger2
+- Nvogation components
 - Room DB
 - Material design
